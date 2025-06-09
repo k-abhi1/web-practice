@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Navbar</title>
+  <style>
+    /* Reset default */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Header Style */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f7f8f9;
+      color: rgb(14, 14, 14);
+      padding: 8px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    /* Logo */
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    /* Nav links */
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      color: rgb(16, 16, 16);
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #6fea0b;
+      /* box-shadow: 10px 5px 5px red; */
+    }
+
+    /* Menu button - for mobile */
+    .menu-btn {
+      display: none;
+      font-size: 1.8rem;
+      background: none;
+      color: black;
+      /* Visible now */
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 30px;
+        background-color: black;
+        /* Changed to black */
+        flex-direction: column;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(13, 12, 12, 0.3);
+      }
+
+      nav a {
+        color: white;
+        /* Ensure text is visible on black background */
+      }
+
+      nav a:hover {
+        color: #6fea0b;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+    }
+
+    .h {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .h h1 {
+      font-size: 2.5rem;
+      color: #333;
+      text-align: center;
+      margin-top: 30vh;
+      margin-left: 20px;
+    }
+
+    .h img {
+      margin-left: 20px;
+      margin-top: 32.5vh;
+    }
+
+    .p {
+      margin-top: 10px;
+    }
+
+    .p p {
+      text-align: center;
+      margin-top: 0px;
+    }
+
+    .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .button button {
+      background-color: #0bd7ea;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .ue {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      margin-top: 20px;
+
+
+    }
+
+    .ue :nth-child(2) {
+      margin-top: 15px;
+      font-weight: 800;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .ue :nth-child(3) {
+      margin-top: 15px;
+
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .card h2 {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: block;
+      margin: 10px auto;
+      padding: 12px 20px;
+      font-size: 1rem;
+      font-weight: bold;
+      background-color: #00bcd4;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      width: 80%;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #0097a7;
+    }
+
+    /* Media Query: Smaller screens */
+    @media (max-width: 500px) {
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="Dark-logo.png" alt="" height="30" width="100">
+    </div>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <nav id="navbar">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Services</a>
+    </nav>
+  </header>
+  <main>
+    <div class="h">
+      <h1>Download UltraEdit for Windows </h1>
+      <img src="Reviews.png" alt="" height="30" width="100">
+    </div>
+    <div class="p">
+      <p>Download and try UltraEdit before you buy it! This download</p>
+      <p>includes the full Windows version of the text editor.</p>
+
+    </div>
+    <div class="button">
+      <button
+        style="background-color: #0bd7ea; color:white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">dowload
+        mac and linuc version</button>
+    </div>
+  </main>
+
+  <div class="ue">
+    <img src="UE.png" alt="">
+    <p>Download UltraEdit</p>
+    <p>v2023.1(released 08/16/2023) | Hotfix</p>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <h2>English</h2>
+      <a href="#" class="btn">Download 32-bit</a>
+      <a href="#" class="btn">Download 64-bit</a>
+    </div>
+    <div class="card">
+      <h2>English</h2>
+      <a href="#" class="btn">Download 32-bit</a>
+      <a href="#" class="btn">Download 64-bit</a>
+    </div>
+    <div class="card">
+      <h2>English</h2>
+      <a href="#" class="btn">Download 32-bit</a>
+      <a href="#" class="btn">Download 64-bit</a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <h2>English</h2>
+      <a href="#" class="btn">Download 32-bit</a>
+      <a href="#" class="btn">Download 64-bit</a>
+    </div>
+    <div class="card">
+      <h2>English</h2>
+      <a href="#" class="btn">Download 32-bit</a>
+      <a href="#" class="btn">Download 64-bit</a>
+    </div>
+    <div class="card">
+      <h2>English</h2>
+      <a href="#" class="btn">Download 32-bit</a>
+      <a href="#" class="btn">Download 64-bit</a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <h2>English</h2>
+      <a href="#" class="btn">Download 32-bit</a>
+      <a href="#" class="btn">Download 64-bit</a>
+    </div>
+    <div class="card">
+      <h2>English</h2>
+      <a href="#" class="btn">Download 32-bit</a>
+      <a href="#" class="btn">Download 64-bit</a>
+    </div>
+    <div class="card">
+      <h2>English</h2>
+      <a href="#" class="btn">Download 32-bit</a>
+      <a href="#" class="btn">Download 64-bit</a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <h2>English</h2>
+      <a href="#" class="btn">Download 32-bit</a>
+      <a href="#" class="btn">Download 64-bit</a>
+    </div>
+    <div class="card">
+      <h2>English</h2>
+      <a href="#" class="btn">Download 32-bit</a>
+      <a href="#" class="btn">Download 64-bit</a>
+    </div>
+    <div class="card">
+      <h2>English</h2>
+      <a href="#" class="btn">Download 32-bit</a>
+      <a href="#" class="btn">Download 64-bit</a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <h2>English</h2>
+      <a href="#" class="btn">Download 32-bit</a>
+      <a href="#" class="btn">Download 64-bit</a>
+    </div>
+    <div class="card">
+      <h2>English</h2>
+      <a href="#" class="btn">Download 32-bit</a>
+      <a href="#" class="btn">Download 64-bit</a>
+    </div>
+    <div class="card">
+      <h2>English</h2>
+      <a href="#" class="btn">Download 32-bit</a>
+      <a href="#" class="btn">Download 64-bit</a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <h2>English</h2>
+      <a href="#" class="btn">Download 32-bit</a>
+      <a href="#" class="btn">Download 64-bit</a>
+    </div>
+    <div class="card">
+      <h2>English</h2>
+      <a href="#" class="btn">Download 32-bit</a>
+      <a href="#" class="btn">Download 64-bit</a>
+    </div>
+    <div class="card">
+      <h2>English</h2>
+      <a href="#" class="btn">Download 32-bit</a>
+      <a href="#" class="btn">Download 64-bit</a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <h2>English</h2>
+      <a href="#" class="btn">Download 32-bit</a>
+      <a href="#" class="btn">Download 64-bit</a>
+    </div>
+    <div class="card">
+      <h2>English</h2>
+      <a href="#" class="btn">Download 32-bit</a>
+      <a href="#" class="btn">Download 64-bit</a>
+    </div>
+    <div class="card">
+      <h2>English</h2>
+      <a href="#" class="btn">Download 32-bit</a>
+      <a href="#" class="btn">Download 64-bit</a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <h2>English</h2>
+      <a href="#" class="btn">Download 32-bit</a>
+      <a href="#" class="btn">Download 64-bit</a>
+    </div>
+    <div class="card">
+      <h2>English</h2>
+      <a href="#" class="btn">Download 32-bit</a>
+      <a href="#" class="btn">Download 64-bit</a>
+    </div>
+    <div class="card">
+      <h2>English</h2>
+      <a href="#" class="btn">Download 32-bit</a>
+      <a href="#" class="btn">Download 64-bit</a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <h2>English</h2>
+      <a href="#" class="btn">Download 32-bit</a>
+      <a href="#" class="btn">Download 64-bit</a>
+    </div>
+    <div class="card">
+      <h2>English</h2>
+      <a href="#" class="btn">Download 32-bit</a>
+      <a href="#" class="btn">Download 64-bit</a>
+    </div>
+    <div class="card">
+      <h2>English</h2>
+      <a href="#" class="btn">Download 32-bit</a>
+      <a href="#" class="btn">Download 64-bit</a>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navbar');
+      nav.classList.toggle('show');
+    }
+  </script>
+
+</body>
+
+</html>
