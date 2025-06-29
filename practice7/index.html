@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Elias</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #1a1a1a;
+  color: #ccc;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: #111;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+nav a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.hero-img img {
+  width: 300px;
+}
+
+.projects, .skills, .about-me, .contacts {
+  padding: 2rem;
+}
+
+.project-list {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-card {
+  background: #222;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.skill-tags span {
+  background: #333;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #111;
+}
+
+/* Reference Image Style */
+.reference-image {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 300px;
+  opacity: 0.8;
+  border: 2px solid #444;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+.reference-image img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">elias</div>
+    <nav>
+      <ul>
+        <li><a href="#home">home</a></li>
+        <li><a href="#works">works</a></li>
+        <li><a href="#about">about-me</a></li>
+        <li><a href="#contacts">contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="intro">
+      <h1>Elias is a web designer and front-end developer</h1>
+      <p>"With great power comes great electricity bill."</p>
+    </div>
+    <div class="hero-img">
+      <img src="hero-image.png" alt="Hero Image" />
+    </div>
+  </section>
+
+  <section id="works" class="projects">
+    <h2>#projects</h2>
+    <div class="project-list">
+      <div class="project-card">ChartNodes</div>
+      <div class="project-card">ProtectX</div>
+      <div class="project-card">Kahoot Answers</div>
+    </div>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2>#skills</h2>
+    <div class="skill-tags">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>React</span>
+      <span>Node.js</span>
+    </div>
+  </section>
+
+  <section id="about" class="about-me">
+    <h2>#about-me</h2>
+    <p>I am a passionate developer focused on building clean, user-friendly websites and applications.</p>
+  </section>
+
+  <section id="contacts" class="contacts">
+    <h2>#contacts</h2>
+    <p>Contact me via email or social media links below.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 elias | Web designer and front-end developer</p>
+  </footer>
+
+  <!-- Reference Image Display -->
+  <aside class="reference-image">
+    <img src="reference.png" alt="Figma Reference Design" />
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
